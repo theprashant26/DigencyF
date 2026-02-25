@@ -131,7 +131,7 @@ function initThemeSwitch() {
             $('body').removeClass('lightmode');
             localStorage.removeItem('lightmode');
 
-            siteLogos.attr('src', 'image/digiencylogow.png');
+            siteLogos.attr('src', 'image/digihead.png');
 
             partnerLogos.each(function () {
                 const $img = $(this);
