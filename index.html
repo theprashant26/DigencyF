@@ -3,6 +3,16 @@
 
     <head>
     <meta charset="UTF-8">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSMLR1QD62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GSMLR1QD62');
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1547,32 +1557,33 @@
                 <div class="spacer"></div>
             </div>
 
-            <!-- Section Newsletter -->
+            <!-- Section Lead Form -->
             <div class="section">
                 <div class="hero-container">
                     <div class="newsletter-wrapper">
                         <div class="newsletter-layout">
                             <div class="spacer"></div>
                             <div
-                                class="d-flex flex-column gspace-5 position-relative z-2">
+                                class="d-flex flex-column gspace-5 position-relative z-2 w-100">
                                 <div
                                     class="d-flex flex-column gspace-2 animate-box animated animate__animated"
                                     data-animate="animate__fadeInLeft">
-                                    <h3 class="title-heading">Stay Ahead in
-                                        Digital Marketing</h3>
-                                    <p>Get exclusive insights, trends, and
-                                        strategies delivered straight to your
-                                        inbox. Subscribe now!</p>
+                                    <h3 class="title-heading">Let's Grow Your
+                                        Business</h3>
+                                    <p>Tell us what you need and our team will
+                                        get back to you with a tailored plan.
+                                        No obligation.</p>
                                 </div>
-                                <div id="newsletter-success"
+                                <div id="lead-success"
                                     class="alert success hidden">
                                     <span class="check-icon"><i
                                             class="fa-solid fa-2xl fa-check"></i></span>
-                                    <p class="text-center">Thank you! Form
-                                        submitted successfully.</p>
+                                    <p class="text-center">Thank you! We've got
+                                        your details and will be in touch
+                                        shortly.</p>
                                 </div>
 
-                                <div id="newsletter-error"
+                                <div id="lead-error"
                                     class="alert error hidden">
                                     <span class="cross-icon"><i
                                             class="fa-solid fa-2xl fa-xmark"></i></span>
@@ -1580,29 +1591,56 @@
                                         failed. Please try again.</p>
                                 </div>
 
-                                <form
-                                    action="https://html.foxcreation.net/php/newsletter_process.php"
-                                    method="POST" id="newsletterForm"
-                                    class="needs-validation animate-box animated animate__animated"
+                                <form action="#" method="POST" id="leadForm"
+                                    class="form lead-form animate-box animated animate__animated"
                                     data-animate="animate__fadeInRight">
-                                    <div class="input-container">
-                                        <input type="email"
-                                            name="newsletter-email"
-                                            id="newsletter-email"
-                                            placeholder="Give your best email"
-                                            required>
-                                        <p class="error-text hidden"></p>
+                                    <div class="row row-cols-md-2 row-cols-1 g-3">
+                                        <div class="col">
+                                            <input type="text" name="lead-name"
+                                                id="lead-name"
+                                                placeholder="Full Name" required>
+                                        </div>
+                                        <div class="col">
+                                            <input type="email" name="lead-email"
+                                                id="lead-email"
+                                                placeholder="Email Address" required>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-accent"
-                                        type="submit">
-                                        <span class="btn-title">
-                                            <span>Subscribe</span>
-                                        </span>
-                                        <span class="icon-circle">
-                                            <i
-                                                class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                    </button>
+                                    <div class="row row-cols-md-2 row-cols-1 g-3">
+                                        <div class="col">
+                                            <input type="tel" name="lead-phone"
+                                                id="lead-phone"
+                                                placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="col">
+                                            <select name="lead-service"
+                                                id="lead-service" class="form-select"
+                                                aria-label="Service Interested In">
+                                                <option value="">Service Interested In</option>
+                                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                                <option value="Lead Generation">Lead Generation</option>
+                                                <option value="PPC Advertising">PPC Advertising</option>
+                                                <option value="Political Marketing">Political Marketing</option>
+                                                <option value="Branding &amp; Design">Branding &amp; Design</option>
+                                                <option value="Web Development">Web Development</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <textarea name="lead-message"
+                                        id="lead-message" rows="4"
+                                        placeholder="Tell us about your project (optional)"></textarea>
+                                    <div class="form-button-container justify-content-center">
+                                        <button class="btn btn-accent"
+                                            type="submit">
+                                            <span class="btn-title">
+                                                <span>Get Free Consultation</span>
+                                            </span>
+                                            <span class="icon-circle">
+                                                <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>

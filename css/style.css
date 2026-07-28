@@ -3423,6 +3423,28 @@ body.lightmode .newsletter-layout{
     width: 51%;
 }
 
+/* Lead form inside the gradient panel. The panel centres its text, so the
+   form resets alignment for its own fields. */
+.lead-form{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+/* Leaves room for the dropdown arrow that .form-select draws. */
+.lead-form select{
+    padding-right: 50px;
+}
+
+.lead-form .form-button-container{
+    justify-content: center;
+}
+
+.error-border{
+    border: 1px solid var(--error-color) !important;
+}
+
 /* ================== 40. Breadcrumb Components ================== */
 
 .breadcrumb {

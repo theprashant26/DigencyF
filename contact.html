@@ -3,6 +3,16 @@
 
     <head>
     <meta charset="UTF-8">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSMLR1QD62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GSMLR1QD62');
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -132,40 +142,48 @@
                         </div>
                     </div>
                     <div class="col col-xl-7">
-                        <div id="success-message" class="alert success hidden">
+                        <div id="lead-success" class="alert success hidden">
                             <span class="check-icon"><i class="fa-solid fa-2xl fa-check"></i></span>
-                            <p>Thank you! Form submitted successfully.</p>
+                            <p>Thank you! We've got your details and will be in touch shortly.</p>
                         </div>
-                        
-                        <div id="error-message" class="alert error hidden">
+
+                        <div id="lead-error" class="alert error hidden">
                             <span class="cross-icon"><i class="fa-solid fa-2xl fa-xmark"></i></span>
                             <p>Oops! Form submission failed. Please try again.</p>
                         </div>
                         <div class="form-layout-wrapper">
                             <div class="card form-layout">
                                 <h3 class="title-heading">Let's Talk About Your Next Project</h3>
-                                <form action="#" method="post" id="contactForm" class="form">
+                                <form action="#" method="POST" id="leadForm" class="form lead-form">
                                     <div class="row row-cols-md-2 row-cols-1 g-3">
                                         <div class="col">
-                                            <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                                            <input type="text" name="lead-name" id="lead-name" placeholder="Full Name" required>
                                         </div>
                                         <div class="col">
-                                            <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                                            <input type="email" name="lead-email" id="lead-email" placeholder="Email Address" required>
                                         </div>
                                     </div>
                                     <div class="row row-cols-md-2 row-cols-1 g-3">
                                         <div class="col">
-                                            <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                            <input type="tel" name="lead-phone" id="lead-phone" placeholder="Phone Number" required>
                                         </div>
                                         <div class="col">
-                                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                                            <select name="lead-service" id="lead-service" class="form-select" aria-label="Service Interested In">
+                                                <option value="">Service Interested In</option>
+                                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                                <option value="Lead Generation">Lead Generation</option>
+                                                <option value="PPC Advertising">PPC Advertising</option>
+                                                <option value="Political Marketing">Political Marketing</option>
+                                                <option value="Branding &amp; Design">Branding &amp; Design</option>
+                                                <option value="Web Development">Web Development</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+                                    <textarea name="lead-message" id="lead-message" rows="5" placeholder="Tell us about your project (optional)"></textarea>
                                     <div class="form-button-container">
                                         <button type="submit" class="btn btn-accent">
                                             <span class="btn-title">
-                                                <span>Send a Message</span>
+                                                <span>Get Free Consultation</span>
                                             </span>
                                             <span class="icon-circle">
                                               <i class="fa-solid fa-arrow-right"></i>

@@ -20,8 +20,7 @@ Promise.all([
     initCounter();
     initThemeSwitch();
     initSearchBar();
-    initSubmitContact();
-    initSubmitNewsletter();
+    initSubmitLead();
     initAnimateData();
   });
       
@@ -112,32 +111,19 @@ function initThemeSwitch() {
 
     const updateLogos = () => {
         const siteLogos = $('.site-logo');
-        const partnerLogos = $('.partner-logo');
 
+        // Client logos in image/DigencyClientLogo/ have no per-theme variants,
+        // so their src is left untouched — only the site logo swaps.
         if (lightMode) {
             $('body').addClass('lightmode');
             localStorage.setItem('lightmode', 'active');
 
             siteLogos.attr('src', 'image/digiencylogo.png');
-
-            partnerLogos.each(function () {
-                const $img = $(this);
-                const src = $img.attr('src');
-                if (!src.includes('-dark')) {
-                    $img.attr('src', src.replace('.png', '-dark.html'));
-                }
-            });
         } else {
             $('body').removeClass('lightmode');
             localStorage.removeItem('lightmode');
 
             siteLogos.attr('src', 'image/digihead.png');
-
-            partnerLogos.each(function () {
-                const $img = $(this);
-                const src = $img.attr('src');
-                $img.attr('src', src.replace('-dark.html', '.png'));
-            });
         }
     };
 
